@@ -2,6 +2,19 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+
+
+header nav a {
+  transition: transform 0.25s ease, color 0.25s ease;
+  display: inline-block; 
+}
+
+header nav a:hover {
+  transform: scale(1.15); 
+  color: #bbf7d0; 
+}
+
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
