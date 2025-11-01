@@ -1,7 +1,19 @@
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
+  0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
+
+.floating-card {
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
 
 
 header nav a {
@@ -61,6 +73,30 @@ header nav a:hover {
   color: #2f855a;
   font-size: 0.95rem;
 }
+/* 🌿 Floating animation for cards */
+.floating-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.floating-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 🛒 Consistent “Order Now” button style */
+.order-btn {
+  background-color: #166534; /* dark green */
+  color: white;
+  font-weight: bold;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.order-btn:hover {
+  background-color: #064e3b;
+  transform: scale(1.05);
+}
+
 
 
 body {

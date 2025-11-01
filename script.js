@@ -18,17 +18,16 @@ const openOrderBtn = document.getElementById('openOrderModal');
 const closeOrderModalBtn = document.getElementById('closeOrderModal');
 
 if (openOrderBtn && orderModal && closeOrderModalBtn) {
-  // open modal
+
   openOrderBtn.addEventListener('click', () => {
     orderModal.classList.remove('hidden');
   });
 
-  // close via X button
   closeOrderModalBtn.addEventListener('click', () => {
     orderModal.classList.add('hidden');
   });
 
-  // close when clicking outside
+
   window.addEventListener('click', (e) => {
     if (e.target === orderModal) {
       orderModal.classList.add('hidden');
@@ -36,7 +35,7 @@ if (openOrderBtn && orderModal && closeOrderModalBtn) {
   });
 }
 
-// 🪴 PRODUCT DETAILS MODAL (if may product.js)
+
 const productModal = document.getElementById('productModal');
 const closeProductModal = document.getElementById('closeProductModal');
 
@@ -46,7 +45,7 @@ if (productModal && closeProductModal) {
   });
 }
 
-// 🌄 Background Image Slideshow
+
 const images = [
   'assets/product1.jpg',
   'assets/product2.jpg',
