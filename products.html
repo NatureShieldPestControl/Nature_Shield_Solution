@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Products - Nature Shield</title>
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
+    /* 🌿 Floating animation for product cards */
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-10px); }
@@ -24,6 +26,7 @@
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
 
+    /* Overlay button on hover */
     .overlay {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -55,7 +58,7 @@
 </head>
 <body class="font-sans text-gray-800 bg-green-50">
 
-  <!-- Header -->
+  <!-- 🌿 Header -->
   <header class="fixed top-0 left-0 w-full bg-green-700 text-white z-50 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold flex items-center space-x-2">
@@ -73,27 +76,48 @@
     </div>
   </header>
 
-  <!-- Products Section -->
+  <!-- 🌾 Products Section -->
   <main class="pt-32 pb-20 text-center px-6">
     <h2 class="text-3xl font-bold text-green-700 mb-10">Our Products</h2>
 
-<div class="flex justify-center">
-  <!-- Product Card -->
-  <div class="floating-card bg-white rounded-2xl shadow-lg p-6">
-    <img src="assets/product1.jpg" alt="Nature Shield" class="rounded-xl w-full h-56 object-cover">
-    <h3 class="mt-4 text-xl font-bold text-green-700">Nature Shield Organic Pesticide</h3>
-    <p class="text-gray-600 mt-2">Eco-friendly plant protection.</p>
-    <div class="overlay">
-      <a href="product-details.html">View Details</a>
+    <div class="flex justify-center">
+      <!-- Product Card -->
+      <div class="floating-card bg-white rounded-2xl shadow-lg p-6">
+        <img src="assets/product1.jpg" alt="Nature Shield" class="rounded-xl w-full h-56 object-cover">
+        <h3 class="mt-4 text-xl font-bold text-green-700">Nature Shield Organic Pesticide</h3>
+        <p class="text-gray-600 mt-2">Eco-friendly plant protection.</p>
+        <div class="overlay">
+          <a href="product-details.html">View Details</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-
   </main>
 
-  
+  <!-- 🎥 Product Video Section -->
+  <section id="video" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold text-green-700 mb-10">
+      Watch Our Product in Action
+    </h2>
 
-  <!-- Footer -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
+      <video autoplay muted loop playsinline
+        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
+        <source src="assets/4.mp4" type="video/mp4">
+      </video>
+
+      <video autoplay muted loop playsinline
+        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
+        <source src="assets/2.mp4" type="video/mp4">
+      </video>
+
+      <video autoplay muted loop playsinline
+        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
+        <source src="assets/3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- 🌱 Footer -->
   <footer class="bg-green-700 text-white text-center py-10">
     <h2 class="text-2xl font-bold mb-2">Contact Us</h2>
     <p>📞 09465487681 | 📧 natureshield274@gmail.com</p>
