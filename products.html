@@ -117,7 +117,6 @@
     </div>
   </section>
 
-  <!-- 🌱 Footer -->
   <footer class="bg-green-700 text-white text-center py-10">
     <h2 class="text-2xl font-bold mb-2">Contact Us</h2>
     <p>📞 09465487681 | 📧 natureshield274@gmail.com</p>
@@ -129,6 +128,22 @@
     </p>
     <p class="mt-6 text-gray-200 text-sm">© 2025 Nature Shield Pest Control. All rights reserved.</p>
   </footer>
+  <script>
+
+  const productImg = document.querySelector(".floating-card img");
+  const productImages = [
+    "assets/product1.jpg",
+    "assets/product2.jpg",
+    "assets/product3.jpg"
+  ];
+
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % productImages.length;
+    productImg.src = productImages[index];
+  }, 2000); 
+</script>
+
 
 </body>
 </html>

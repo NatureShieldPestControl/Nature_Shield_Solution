@@ -9,6 +9,7 @@
 </head>
 <body class="font-sans text-gray-800">
 
+  <!-- HEADER -->
   <header class="fixed top-0 left-0 w-full bg-green-700 text-white z-50 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold flex items-center space-x-2">
@@ -26,34 +27,39 @@
     </div>
   </header>
 
-<main class="pt-20"> <!-- padding top to offset header height -->
-<section class="h-screen bg-cover bg-center flex flex-col justify-center items-center text-center text-white"
-style="background-image: url('assets/product1.jpg');">
-    
-    <div class="bg-black bg-opacity-50 p-10 rounded-xl animate-float">
-      <h2 class="text-4xl font-bold mb-4">Protect Nature, Protect Your Plants</h2>
-      <p class="text-lg mb-6">Organic. Safe. Effective. Nature Shield Pest Control</p>
-      <a href="products.html"
-        class="bg-green-600 hover:bg-green-800 px-6 py-3 rounded-lg text-white font-semibold transition transform hover:scale-105">
-        Explore Products
-      </a>
-    </div>
-  </section>
-</main>
+  <!-- HERO SECTION WITH SLIDER -->
+  <main class="pt-20">
+    <section class="relative h-screen overflow-hidden">
+      <div class="slider h-full">
+        <img src="assets/product1.jpg" alt="Slide 1" class="slide active">
+        <img src="assets/product2.jpg" alt="Slide 2" class="slide">
+        <img src="assets/product3.jpg" alt="Slide 3" class="slide">
+      </div>
 
+      <!-- Overlay Text -->
+      <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center text-white animate-float">
+        <h2 class="text-4xl font-bold mb-4">Protect Nature, Protect Your Plants</h2>
+        <p class="text-lg mb-6">Organic. Safe. Effective. Nature Shield Pest Control</p>
+        <a href="products.html"
+          class="bg-green-600 hover:bg-green-800 px-6 py-3 rounded-lg text-white font-semibold transition transform hover:scale-105">
+          Explore Products
+        </a>
+      </div>
+    </section>
+  </main>
 
-<footer class="bg-green-700 text-white text-center py-10">
-  <h2 class="text-2xl font-bold mb-2">Contact Us</h2>
-  <p>📞 09465487681 | 📧 natureshield274@gmail.com</p>
-  <p>Facebook: 
-    <a href="https://facebook.com/NatureShield" class="text-green-300 hover:underline">Nature Shield</a>
-  </p>
-  <p>TikTok: 
-    <a href="https://tiktok.com/@natureshield_24" class="text-green-300 hover:underline">@natureshield_24</a>
-  </p>
-  <p class="mt-6 text-gray-200 text-sm">© 2025 Nature Shield Pest Control. All rights reserved.</p>
-</footer>
-
+  <!-- FOOTER -->
+  <footer class="bg-green-700 text-white text-center py-10">
+    <h2 class="text-2xl font-bold mb-2">Contact Us</h2>
+    <p>📞 09465487681 | 📧 natureshield274@gmail.com</p>
+    <p>Facebook: 
+      <a href="https://facebook.com/NatureShield" class="text-green-300 hover:underline">Nature Shield</a>
+    </p>
+    <p>TikTok: 
+      <a href="https://tiktok.com/@natureshield_24" class="text-green-300 hover:underline">@natureshield_24</a>
+    </p>
+    <p class="mt-6 text-gray-200 text-sm">© 2025 Nature Shield Pest Control. All rights reserved.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

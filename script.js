@@ -18,7 +18,6 @@ const openOrderBtn = document.getElementById('openOrderModal');
 const closeOrderModalBtn = document.getElementById('closeOrderModal');
 
 if (openOrderBtn && orderModal && closeOrderModalBtn) {
-
   openOrderBtn.addEventListener('click', () => {
     orderModal.classList.remove('hidden');
   });
@@ -27,7 +26,6 @@ if (openOrderBtn && orderModal && closeOrderModalBtn) {
     orderModal.classList.add('hidden');
   });
 
-
   window.addEventListener('click', (e) => {
     if (e.target === orderModal) {
       orderModal.classList.add('hidden');
@@ -35,7 +33,7 @@ if (openOrderBtn && orderModal && closeOrderModalBtn) {
   });
 }
 
-
+// 🟩 PRODUCT MODAL CLOSE
 const productModal = document.getElementById('productModal');
 const closeProductModal = document.getElementById('closeProductModal');
 
@@ -45,18 +43,20 @@ if (productModal && closeProductModal) {
   });
 }
 
-
+// 🌿 Homepage Image Background Slider
 const images = [
   'assets/product1.jpg',
   'assets/product2.jpg',
   'assets/product3.jpg'
 ];
 
-let index = 0;
+let currentIndex = 0;
 const homeSection = document.getElementById('home');
-homeSection.style.transition = 'background-image 2s ease-in-out';
 
-setInterval(() => {
-  index = (index + 1) % images.length;
-  homeSection.style.backgroundImage = `url('${images[index]}')`;
-}, 3000);
+if (homeSection) {
+  homeSection.style.transition = 'background-image 2s ease-in-out';
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    homeSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+  }, 4000); // every 4 seconds
+}
