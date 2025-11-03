@@ -212,3 +212,73 @@ footer h2 {
     height: 2rem;
   }
 }
+
+/* 🖼️ Container setup */
+.slide-container {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.slide-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 100%;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/* Picture na papasok */
+.slide-container img.active {
+  left: 0;
+  opacity: 1;
+}
+
+.slide-container img.exit {
+  left: -100%;
+  opacity: 0;
+}
+#slideshow1 img,
+#slideshow2 img,
+#slideshow3 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1.2s ease-in-out;
+  opacity: 0;
+  transform: translate(0, 0);
+  border-radius: 1rem;
+}
+
+#slideshow1 img:first-child,
+#slideshow2 img:first-child,
+#slideshow3 img:first-child {
+  opacity: 1;
+}
+.feedback-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  transition: transform 0.4s ease, opacity 1.2s ease-in-out;
+  border-radius: 10px;
+}
+
+/* 🔍 Zoom kapag naka-hover */
+.feedback-img:hover {
+  transform: scale(1.1);
+  z-index: 5;
+}
+
+
+
+
+
+

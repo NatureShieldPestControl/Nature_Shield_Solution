@@ -1,60 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Nature Shield</title>
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    /* 🌿 Floating animation for product cards */
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
-
-    .floating-card {
-      animation: float 4s ease-in-out infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .floating-card:hover {
-      transform: translateY(-15px) scale(1.03);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-    }
-
-    /* Overlay button on hover */
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      opacity: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.3s ease;
-    }
-
-    .floating-card:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay a {
-      background: #22c55e;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 9999px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .overlay a:hover {
-      background: #16a34a;
-    }
-  </style>
 </head>
 <body class="font-sans text-gray-800 bg-green-50">
 
@@ -62,8 +12,8 @@
   <header class="fixed top-0 left-0 w-full bg-green-700 text-white z-50 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold flex items-center space-x-2">
-        <img src="assets/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white">
-        <span>Nature Shield</span>
+        <img src="assets/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white" />
+        <span>Nature Shield</span>🌿
       </h1>
       <nav>
         <ul class="flex space-x-6">
@@ -71,6 +21,7 @@
           <li><a href="about.html" class="hover:text-green-200">About</a></li>
           <li><a href="history.html" class="hover:text-green-200">History</a></li>
           <li><a href="feedback.html" class="hover:text-green-200">Feedback</a></li>
+          <li><a href="mission-vision.html" class="hover:text-green-200">Mission & Vision</a></li>
         </ul>
       </nav>
     </div>
@@ -78,46 +29,153 @@
 
   <!-- 🌾 Products Section -->
   <main class="pt-32 pb-20 text-center px-6">
-    <h2 class="text-3xl font-bold text-green-700 mb-10">Our Products</h2>
+    <h2 class="text-3xl font-bold text-green-700 mb-10">🌿 Our Products</h2>
 
-    <div class="flex justify-center">
-      <!-- Product Card -->
-      <div class="floating-card bg-white rounded-2xl shadow-lg p-6">
-        <img src="assets/product1.jpg" alt="Nature Shield" class="rounded-xl w-full h-56 object-cover">
-        <h3 class="mt-4 text-xl font-bold text-green-700">Nature Shield Organic Pesticide</h3>
-        <p class="text-gray-600 mt-2">Eco-friendly plant protection.</p>
-        <div class="overlay">
-          <a href="product-details.html">View Details</a>
+    <!-- 🔹 Product + Info Side by Side -->
+    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-10 flex flex-col lg:flex-row gap-10 items-start">
+
+      <!-- 📸 Left Side: Slideshow + Video -->
+      <div class="w-full lg:w-1/2 flex flex-col gap-5">
+        <!-- Slideshow -->
+        <div class="relative rounded-2xl overflow-hidden shadow-lg">
+          <img id="slideshowImage" src="assets/product1.jpg"
+               class="w-full h-64 object-cover transition-all duration-700" alt="Nature Shield Product" />
+        </div>
+
+        <!-- Demo Video -->
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <video src="assets/4.mp4" autoplay muted loop
+                 class="rounded-xl shadow-lg w-full h-80 object-cover"></video>
+        </div>
+      </div>
+
+      <!-- 📋 Right Side: Usage + Benefits -->
+      <div class="w-full lg:w-1/2 text-left space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold text-green-700 mb-3">Usage Guidelines</h3>
+          <p class="text-gray-700 font-semibold">For Pest Repelling:</p>
+          <ul class="list-disc list-inside text-gray-600 text-sm leading-relaxed">
+            <li>Shake the bottle well before use.</li>
+            <li>Hold the spray upright and aim it away from your face.</li>
+            <li>Spray around entry points where pests commonly enter.</li>
+            <li>Spray directly onto areas where pests are visible.</li>
+            <li>Avoid spraying directly on food, sensitive surfaces, or bedding.</li>
+          </ul>
+
+          <p class="mt-4 text-gray-700 font-semibold">For Plant Protection:</p>
+          <ul class="list-disc list-inside text-gray-600 text-sm leading-relaxed">
+            <li>Spray the solution onto the leaves, stems, and surrounding soil of plants.</li>
+            <li>Apply in the morning or late afternoon when temperatures are cooler.</li>
+            <li>Use the spray 2–3 times a week, or as needed, to keep plants pest-free.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-green-700 mb-3">Benefits</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-6">
+            Nature Shield can be used effectively to repel and manage spider mites in gardens and nurseries.
+            It’s safe for patios and indoor plants. Ideal for outdoor gardens, greenhouses, and balconies,
+            offering comprehensive pest control. Makes a thoughtful, eco-friendly gift for nature lovers.
+            Perfect for environmental advocacy campaigns as a sustainable pest control example.
+          </p>
+
+          <!-- 🔘 View Details Button -->
+          <div class="flex justify-center">
+            <button onclick="openDetailsModal()"
+                    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-5 rounded-lg transition">
+              View Details
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
+
+    <!-- 🌿 Product Variants -->
+    <section class="max-w-5xl mx-auto mt-16 space-y-10 px-6 text-center">
+      <div class="bg-white rounded-2xl shadow-lg p-8">
+        <h3 class="text-2xl font-semibold text-green-700 mb-6">Product Variants</h3>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-8 text-gray-700">
+          
+          <!-- 100ml -->
+          <div class="bg-green-50 p-6 rounded-xl shadow-inner w-60 hover:scale-105 transition-transform duration-300 cursor-pointer"
+               onclick="openOrderModal('100ml', '₱100')">
+            <p class="text-lg font-semibold text-green-700 mb-2">100ml</p>
+            <p class="text-xl font-bold text-gray-800">₱100</p>
+          </div>
+
+          <span class="text-gray-400 text-2xl font-bold">&</span>
+
+          <!-- 200ml -->
+          <div class="bg-green-50 p-6 rounded-xl shadow-inner w-60 hover:scale-105 transition-transform duration-300 cursor-pointer"
+               onclick="openOrderModal('200ml', '₱170')">
+            <p class="text-lg font-semibold text-green-700 mb-2">200ml</p>
+            <p class="text-xl font-bold text-gray-800">₱170</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- 🎥 Product Video Section -->
-  <section id="video" class="py-16 bg-white text-center">
-    <h2 class="text-3xl font-bold text-green-700 mb-10">
-      Watch Our Product in Action
-    </h2>
+  <!-- 🛒 Order Modal -->
+  <div id="orderModal"
+       class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-[90%] max-w-md relative text-center animate-fadeIn">
+      <button id="closeOrderModal"
+              class="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-2xl font-bold">&times;</button>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 max-w-6xl mx-auto">
-      <video autoplay muted loop playsinline
-        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
-        <source src="assets/4.mp4" type="video/mp4">
-      </video>
+      <h2 class="text-2xl font-bold text-green-700 mb-6">Choose Your Order Option</h2>
 
-      <video autoplay muted loop playsinline
-        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
-        <source src="assets/2.mp4" type="video/mp4">
-      </video>
+      <p class="text-gray-700 mb-2">Selected Size: <span id="variantSize" class="font-bold text-green-700"></span></p>
+      <p class="text-gray-700 mb-6">Price: <span id="variantPrice" class="font-bold text-green-700"></span></p>
 
-      <video autoplay muted loop playsinline
-        class="rounded-xl shadow-lg w-full h-[220px] object-cover hover:scale-105 transition-transform duration-500">
-        <source src="assets/3.mp4" type="video/mp4">
-      </video>
+      <div class="flex flex-col gap-4">
+        <a href="https://tiktok.com/@natureshield_24"
+           class="block w-full bg-green-500 hover:bg-pink-600 text-white font-semibold py-3 rounded-md text-center transition">
+          Order via TikTok
+        </a>
+
+        <a href="https://facebook.com/NatureShield"
+           class="block w-full bg-green-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md text-center transition">
+          Order via Facebook
+        </a>
+
+        <a href="mailto:natureshield274@gmail.com"
+           class="block w-full bg-green-400 hover:bg-yellow-500 text-white font-semibold py-3 rounded-md text-center transition">
+          Order via Email
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <footer class="bg-green-700 text-white text-center py-10">
+  <!-- 📦 Product Description Modal -->
+  <div id="detailsModal"
+       class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center z-50">
+    <div class="bg-white p-8 rounded-2xl shadow-xl w-[90%] max-w-2xl relative animate-fadeIn overflow-y-auto max-h-[90vh]">
+      <button id="closeDetailsModal"
+              class="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-2xl font-bold">&times;</button>
+
+      <h2 class="text-2xl font-bold text-green-700 mb-4">Product Description</h2>
+      <p class="text-gray-700 leading-relaxed text-sm">
+        Nature Shield Pest Control is a handmade organic pesticide carefully formulated from natural and locally
+        sourced ingredients. It is made using fish gills, which serve as the base for fish amino acid that nourishes
+        plants and helps them grow stronger. Molasses is added as a natural fermenting agent and preservative,
+        ensuring the mixture stays effective over time. To complete the formula, madre cacao leaves are included for
+        their powerful pest-repelling and antibacterial properties.
+        <br><br>
+        Through a natural fermentation process, these ingredients work together to create a safe, effective, and
+        eco-friendly solution that protects plants from common pests such as aphids, caterpillars, and mites. Unlike
+        chemical pesticides, Nature Shield is gentle on plants, safe for humans, and friendly to the environment.
+        <br><br>
+        Each bottle is carefully prepared, filtered, and packaged by hand to maintain high quality and consistency.
+        With regular use, Nature Shield not only keeps your plants pest-free but also helps them grow healthier and
+        more vibrant — naturally.
+      </p>
+    </div>
+  </div>
+
+  <!-- 🌿 Footer -->
+  <footer class="bg-green-700 text-white text-center py-10 mt-16">
     <h2 class="text-2xl font-bold mb-2">Contact Us</h2>
     <p>📞 09465487681 | 📧 natureshield274@gmail.com</p>
     <p>Facebook:
@@ -128,22 +186,40 @@
     </p>
     <p class="mt-6 text-gray-200 text-sm">© 2025 Nature Shield Pest Control. All rights reserved.</p>
   </footer>
+
+  <!-- ⚙️ Script -->
   <script>
+    // 🛒 Order Modal
+    function openOrderModal(size, price) {
+      document.getElementById("variantSize").textContent = size;
+      document.getElementById("variantPrice").textContent = price;
+      document.getElementById("orderModal").classList.remove("hidden");
+    }
+    document.getElementById("closeOrderModal").addEventListener("click", () => {
+      document.getElementById("orderModal").classList.add("hidden");
+    });
 
-  const productImg = document.querySelector(".floating-card img");
-  const productImages = [
-    "assets/product1.jpg",
-    "assets/product2.jpg",
-    "assets/product3.jpg"
-  ];
+    // 🔄 Slideshow logic
+    const slideshowImages = [
+      "assets/product1.jpg",
+      "assets/product2.jpg",
+      "assets/product3.jpg",
+    ];
+    let currentIndex = 0;
+    const slideshow = document.getElementById("slideshowImage");
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slideshowImages.length;
+      slideshow.src = slideshowImages[currentIndex];
+    }, 2000);
 
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % productImages.length;
-    productImg.src = productImages[index];
-  }, 2000); 
-</script>
-
+    // 📦 Details Modal
+    function openDetailsModal() {
+      document.getElementById("detailsModal").classList.remove("hidden");
+    }
+    document.getElementById("closeDetailsModal").addEventListener("click", () => {
+      document.getElementById("detailsModal").classList.add("hidden");
+    });
+  </script>
 
 </body>
 </html>
